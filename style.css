@@ -1,0 +1,79 @@
+          /* Overordnet container, nederst til venstre */
+          .my-ad-container {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 999999;
+            font-family: Arial, sans-serif;
+          }
+
+          .ad-container {
+            opacity: 0;
+            transition: 0.3s;
+            transform: translateX(-120%);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+          }
+          
+          .display {
+            opacity: 1;
+            transform: translateX(0);
+          }
+
+          .my-ad-frame {
+            width: 320px;
+            height: 320px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden; 
+          }
+          
+      
+          .ad-slot {
+            position: absolute;
+            top: 40px;
+            left: 10px;
+            width: 300px;
+            height: 250px;
+            background: #eee; /* Placeholder lokalt */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+          }
+      
+          /* Luk-knap i top-hjørne, uden at overlappe annoncen */
+          .close-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: #f66c6c;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 8px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+          }
+          .close-btn:hover {
+            background: #e23535;
+          }
+          .ads-by {
+            position: absolute;
+            bottom: 5px;       /* 5px fra bunden */
+            left: 10px;
+            font-size: 12px;
+            color: #666;
+            background: rgba(255,255,255,0.8);
+            border-radius: 3px;
+            padding: 2px 4px;
+            display: flex;
+            align-items: center;
+          }
+          .ads-by img {
+            height: 14px;
+            margin-left: 4px;
+          }
